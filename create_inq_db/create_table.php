@@ -11,15 +11,15 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-// sql to create table
-$sql = "CREATE TABLE users (
-id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
-name VARCHAR(255) NOT NULL,
-username VARCHAR(255) NOT NULL,
-email VARCHAR(50),
-password VARCHAR (25),
-reg_date TIMESTAMP
-)";
+// inq_database to create table
+$sql = "CREATE TABLE user (
+	id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	name VARCHAR(255),
+	email VARCHAR(255),
+	password CHAR(32),
+	UNIQUE (email)
+) DEFAULT CHARACTER SET utf8;
+";
 
 if ($conn->query($sql) === TRUE) {
     echo "Table users created successfully";

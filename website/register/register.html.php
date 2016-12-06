@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Forms</title>
 
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/datepicker3.css" rel="stylesheet">
-    <link href="css/styles.css" rel="stylesheet">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/datepicker3.css" rel="stylesheet">
+    <link href="../css/styles.css" rel="stylesheet">
 
     <!--[if lt IE 9]>
     <script src="js/html5shiv.js"></script>
-    <script src="js/respond.min.js"></script>
+    <script src="../js/respond.min.js"></script>
     <![endif]-->
 
 </head>
@@ -49,7 +49,7 @@
                         <div class="form-group">
                             <input name="submit" type="submit" value="Submit Me">
                         </div>
-                        <a href="login.html" class="btn btn-primary">Login</a>
+                        <a href="../login.html.php" class="btn btn-primary">Login</a>
 
                     </fieldset>
                 </form>
@@ -58,13 +58,13 @@
     </div><!-- /.col-->
 </div><!-- /.row -->
 
-<script src="js/jquery-1.11.1.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/chart.min.js"></script>
-<script src="js/chart-data.js"></script>
-<script src="js/easypiechart.js"></script>
-<script src="js/easypiechart-data.js"></script>
-<script src="js/bootstrap-datepicker.js"></script>
+<script src="../js/jquery-1.11.1.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/chart.min.js"></script>
+<script src="../js/chart-data.js"></script>
+<script src="../js/easypiechart.js"></script>
+<script src="../js/easypiechart-data.js"></script>
+<script src="../js/bootstrap-datepicker.js"></script>
 <script>
     !function ($) {
         $(document).on("click","ul.nav li.parent > a > span.icon", function(){

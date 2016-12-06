@@ -1,14 +1,14 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: donald
+ * User: login_system_inq
  * Date: 29/11/2016
  * Time: 2:55 PM
  */
-//include "login.html";
+//include "login.html.php";
 
 if (!isset($_REQUEST['name'])) {
-    include 'register.html.php';
+    include 'register.html.php.php';
 }
 if(isset($_POST["username"], $_POST["password"])) {
 

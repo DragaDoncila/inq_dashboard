@@ -1,7 +1,7 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: donald
+ * User: login_system_inq
  * Date: 25/11/2016
  * Time: 4:01 PM
  */
@@ -68,7 +68,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $sql = "INSERT INTO users (name, username, email, password) VALUES ('$name', '$username', '$email', '$password')";
     if ($conn->query($sql) === TRUE) {
         echo "New record created successfully";
-        include "login.html";
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
     }
