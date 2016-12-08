@@ -1,7 +1,7 @@
 <?php
 $servername = "localhost";
 $username = "root";
-$password = "newpassword";
+$password = "";
 $dbname = "inq_dashboard";
 
 // Create connection
@@ -14,6 +14,7 @@ if ($conn->connect_error) {
 // inq_database to create table
 $sql = "CREATE TABLE user (
 	id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	username VARCHAR(255),
 	name VARCHAR(255),
 	email VARCHAR(255),
 	password CHAR(32),

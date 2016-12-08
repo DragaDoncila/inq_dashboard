@@ -21,7 +21,7 @@ if (!$error){
     $password = md5($_POST['password']);
     $servername = "localhost";
     $db_username = "root";
-    $db_password = "newpassword";
+    $db_password = "";
     $dbname = "inq_dashboard";
 
 // Create connection

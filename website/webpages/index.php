@@ -8,7 +8,7 @@
 //include "login.html.php";
 
 if (!isset($_REQUEST['name'])) {
-    include 'register.html.php.php';
+    include '../../website/register/register.html.php';
 }
 if(isset($_POST["username"], $_POST["password"])) {
 

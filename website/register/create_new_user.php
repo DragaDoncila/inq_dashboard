@@ -8,7 +8,7 @@
 
 $servername = "localhost";
 $db_username = "root";
-$db_password = "newpassword";
+$db_password = "";
 $dbname = "inq_dashboard";
 
 // Create connection
@@ -65,7 +65,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 } if ($error){
     echo "Didn't create a user";
 } else{
-    $sql = "INSERT INTO users (name, username, email, password) VALUES ('$name', '$username', '$email', '$password')";
+    $sql = "INSERT INTO user (`name`, `username`, `email`, `password`) VALUES ('$name', '$username', '$email', '$password')";
     if ($conn->query($sql) === TRUE) {
         echo "New record created successfully";
     } else {
