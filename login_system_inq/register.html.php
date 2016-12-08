@@ -55,7 +55,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($valid){
         $password = md5($_POST['password']);
-        $sql = "INSERT INTO user (name, username, email, password) VALUES ('$fullname', '$username', '$email', '$password')";
+        $sql = "INSERT INTO user (`name`, `username`, `email`, `password`) VALUES ('$fullname', '$username', '$email', '$password')";
         if ($conn->query($sql) === TRUE) {
             echo "New record created successfully";
         } else {

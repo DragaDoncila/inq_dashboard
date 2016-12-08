@@ -65,7 +65,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 } if ($error){
     echo "Didn't create a user";
 } else{
-    $sql = "INSERT INTO user (`name`, `username`, `email`, `password`) VALUES ('$name', '$username', '$email', '$password')";
+    $sql = "INSERT INTO user (`name`, `username`, `email`, `password`, `num_days`, `num_desk_hours`, `num_room_hours`) VALUES ('$name', '$username', '$email', '$password', 0, 10, 4)";
     if ($conn->query($sql) === TRUE) {
         echo "New record created successfully";
     } else {
