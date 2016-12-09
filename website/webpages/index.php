@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 /**
  * Created by PhpStorm.
  * User: login_system_inq
@@ -6,26 +8,44 @@
  * Time: 2:55 PM
  */
 //include "login.html.php";
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "inq_dashboard";
 
-if (!isset($_REQUEST['name'])) {
-    include '../../website/register/register.html.php';
-}
-if(isset($_POST["username"], $_POST["password"])) {
 
+$connection = new mysqli($servername, $username, $password);
+$connection->select_db($dbname);
+
+//if (!isset($_REQUEST['name'])) {
+//    include '../../website/register/register.html.php';
+//}
+
+if (isset($_POST["username"], $_POST["password"])) {
     $name = $_POST["username"];
     $password = $_POST["password"];
 
-    $result1 = mysqli_query("SELECT username, password FROM users WHERE username = '" . $name . "' AND  password = '" . $password . "'");
+    $sql = "SELECT `id`, `username`, `name`, `password` FROM `user` WHERE `username` = '$name'";
+    $result1 = $connection->query($sql);
 
-    while ($row = mysqli_fetch_assoc($result1)) {
-        $check_username = $row['username'];
-        $check_password = $row['password'];
+    $db_username = "";
+    $db_password = "";
+    $user_id = "";
+
+    while ($row = $result1->fetch_assoc()) {
+        $db_username = $row['username'];
+        $db_password = $row['password'];
+        $user_id = $row['id'];
+        $user_name = $row['name'];
     }
 
-    if ($username == $check_username && $password == $check_password) {
-        echo "Matches.";
+    if ($name == $db_username && $password == $db_password) {
+        $_SESSION['current_userid']= $user_id;
+        $_SESSION['current_username'] = $db_username;
+        $_SESSION['user_name'] = $user_name;
+        echo "Welcome " . $_SESSION['user_name'] . "!";
     } else {
         echo "No match.";
     }
 }
-    ?>
+?>

@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://C:/wamp64/www/inq_dashboard/.idea/inq_dashboard.iml" filepath="C:/wamp64/www/inq_dashboard/.idea/inq_dashboard.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/iNQDashboard.iml" filepath="$PROJECT_DIR$/.idea/iNQDashboard.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../inq_dashboard/.idea/inq_dashboard.iml" filepath="$PROJECT_DIR$/../inq_dashboard/.idea/inq_dashboard.iml" />
     </modules>
   </component>
 </project>
